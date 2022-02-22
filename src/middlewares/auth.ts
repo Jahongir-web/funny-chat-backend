@@ -10,7 +10,7 @@ const authRole = () => {
       const authHeader = req.headers["authorization"];
       const token = authHeader && authHeader.split(" ")[1];
       if (!token) return res.status(400).send("Token yo'qligi sababli so'rovingiz rad etildi!");
-      verify(token, userConfig.ACCESS_TOKEN_SECRET, (err, user) => {
+      verify(token, userConfig.ACCESS_TOKEN_SECRET, (err, user: any) => {
         if (err) return res.error.invalidAuthorization(res, 403);
         const user_id = user?.user_id
         const user_email = user?.user_email
