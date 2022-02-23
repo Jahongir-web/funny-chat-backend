@@ -33,7 +33,11 @@ const NEW_MESSAGE = `
 `
 
 const READ_MESSAGE = `
-    update messages set is_read = true where author_id = $1 and user_id = $2
+  update messages set is_read = true where author_id = $1 and user_id = $2
+`
+
+const USERS_STATUS = `
+  update users set is_active = $1 where user_id = $2
 `
 
 
@@ -47,4 +51,5 @@ export default {
   MESSAGES,
   NEW_MESSAGE,
   READ_MESSAGE,
+  USERS_STATUS,
 }
