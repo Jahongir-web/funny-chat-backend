@@ -50,7 +50,11 @@ io.on('connection', socket => {
     socket.broadcast.emit('update users', users)
   })
   
-  
+  socket.on('sendMessage', async() => {
+    const new_messages = await rows(query.MESSAGES)
+
+    socket.broadcast.emit('new message', new_messages)    
+  })
 	// socket.on('send_message', (message) => {
 
 		// socket.broadcast.emit('update users', 'message111')
