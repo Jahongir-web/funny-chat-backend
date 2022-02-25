@@ -25,7 +25,7 @@ const USERS = `
 
 
 const MESSAGES = `
-    select * from messages
+  select * from messages order by created_at
 `
 
 const NEW_MESSAGE = `
