@@ -25,7 +25,7 @@ const USERS = `
 
 
 const MESSAGES = `
-    select message_id, message_text, message_file, author_id, user_id, to_char(created_at,'HH12:MI') as date from messages
+    select * from messages
 `
 
 const NEW_MESSAGE = `
