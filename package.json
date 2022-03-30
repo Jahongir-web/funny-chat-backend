@@ -1,7 +1,7 @@
 {
   "name": "funny-chat-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "simple chat server",
   "main": "index.js",
   "scripts": {
     "start": "node dist/server.js",
